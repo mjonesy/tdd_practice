@@ -5,18 +5,16 @@ class ChangeMachine
     coins = []
     while cents > 0
       if cents >= 25
-        coins << 25
-        cents -= 25
+        denomination = 25
       elsif cents >= 10
-        coins << 10
-        cents -= 10
+        denomination = 10
       elsif cents >= 5
-        coins << 5
-        cents -= 5
+        denomination = 5
       elsif cents >= 1        
-        coins << 1
-        cents -= 1
+        denomination = 1
       end
+      coins << denomination
+      cents -= denomination
     end
     coins
   end
